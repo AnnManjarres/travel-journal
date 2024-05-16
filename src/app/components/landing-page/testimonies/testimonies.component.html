@@ -1,0 +1,20 @@
+<div class="text-center">
+    <div class="p-20">
+        <h2 class="tracking-wider text-3xl font-extrabold text-gray-600">Testimonies</h2>
+        <div class="flex mt-16">
+            <div *ngFor="let testimony of testimonies" class="max-w-sm rounded overflow-hidden shadow-lg me-5">
+                <img class="w-full" [src]="testimony.image" alt="Sunset in the mountains">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">{{ testimony.name }}</div>
+                    <p class="text-gray-700 text-base text-justify">{{ testimony.text }}</p>
+                </div>
+                <div class="px-6 pt-4 pb-2">
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                        *ngFor="let tag of testimony.tag">#{{ tag }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
